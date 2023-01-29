@@ -8,3 +8,4 @@ editor.linenumbers=true
 editor.save_on_verify=true
 target_package=teensy
 target_platform=avr
+update.check=false
