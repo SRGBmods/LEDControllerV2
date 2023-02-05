@@ -47,7 +47,7 @@ teensy41.build.flags.c=
 teensy41.build.flags.S=-x assembler-with-cpp
 teensy41.build.flags.libs=-larm_cortexM7lfsp_math -lm -lstdc++
 teensy41.serial.restart_cmd=false
-teensy41.menu.usb.rawhid512=Raw HID 512
+teensy41.menu.usb.rawhid512=SRGBmods LC v2
 teensy41.menu.usb.rawhid512.build.usbtype=USB_RAWHID512
 teensy41.menu.usb.rawhid512.fake_serial=teensy_gateway
 
@@ -114,7 +114,7 @@ teensy40.build.flags.c=
 teensy40.build.flags.S=-x assembler-with-cpp
 teensy40.build.flags.libs=-larm_cortexM7lfsp_math -lm -lstdc++
 teensy40.serial.restart_cmd=false
-teensy40.menu.usb.rawhid512=Raw HID 512
+teensy40.menu.usb.rawhid512=SRGBmods LC v2
 teensy40.menu.usb.rawhid512.build.usbtype=USB_RAWHID512
 teensy40.menu.usb.rawhid512.fake_serial=teensy_gateway
 
