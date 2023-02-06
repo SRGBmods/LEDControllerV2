@@ -15,73 +15,6 @@ menu.keys=Keyboard Layout
 # -Wno-unused-but-set-parameter
 # -Wno-sign-compare
 
-
-teensy41.name=Teensy 4.1
-#teensy41.upload.maximum_size=8126464
-teensy41.build.board=TEENSY41
-teensy41.build.flags.ld=-Wl,--gc-sections,--relax "-T{build.core.path}/imxrt1062_t41.ld"
-#teensy41.upload.maximum_data_size=524288
-teensy41.upload.tool=teensyloader
-teensy41.upload.tool.default=teensyloader
-teensy41.upload.tool.teensy=teensyloader
-teensy41.upload.protocol=teensy
-teensy41.upload_port.modelID=0x25
-teensy41.build.core=teensy4
-teensy41.build.mcu=imxrt1062
-teensy41.build.warn_data_percentage=99
-teensy41.build.toolchain=arm/bin/
-teensy41.build.command.gcc=arm-none-eabi-gcc
-teensy41.build.command.g++=arm-none-eabi-g++
-teensy41.build.command.ar=arm-none-eabi-gcc-ar
-teensy41.build.command.objcopy=arm-none-eabi-objcopy
-teensy41.build.command.objdump=arm-none-eabi-objdump
-teensy41.build.command.linker=arm-none-eabi-gcc
-teensy41.build.command.size=arm-none-eabi-size
-teensy41.build.flags.common=-g -Wall -ffunction-sections -fdata-sections -nostdlib
-teensy41.build.flags.dep=-MMD
-teensy41.build.flags.optimize=-Os
-teensy41.build.flags.cpu=-mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16
-teensy41.build.flags.defs=-D__IMXRT1062__ -DTEENSYDUINO=157
-teensy41.build.flags.cpp=-std=gnu++14 -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -Wno-unused-variable
-teensy41.build.flags.c=
-teensy41.build.flags.S=-x assembler-with-cpp
-teensy41.build.flags.libs=-larm_cortexM7lfsp_math -lm -lstdc++
-teensy41.serial.restart_cmd=false
-teensy41.menu.usb.rawhid512=SRGBmods LC v2
-teensy41.menu.usb.rawhid512.build.usbtype=USB_RAWHID512
-teensy41.menu.usb.rawhid512.fake_serial=teensy_gateway
-
-teensy41.menu.speed.600=600 MHz
-teensy41.menu.speed.528=528 MHz
-teensy41.menu.speed.450=450 MHz
-teensy41.menu.speed.396=396 MHz
-teensy41.menu.speed.150=150 MHz
-teensy41.menu.speed.24=24 MHz
-teensy41.menu.speed.720=720 MHz (overclock)
-teensy41.menu.speed.816=816 MHz (overclock)
-teensy41.menu.speed.912=912 MHz (overclock, cooling req'd)
-teensy41.menu.speed.960=960 MHz (overclock, cooling req'd)
-teensy41.menu.speed.1008=1.008 GHz (overclock, cooling req'd)
-teensy41.menu.speed.1008.build.fcpu=1008000000
-teensy41.menu.speed.960.build.fcpu=960000000
-teensy41.menu.speed.912.build.fcpu=912000000
-teensy41.menu.speed.816.build.fcpu=816000000
-teensy41.menu.speed.720.build.fcpu=720000000
-teensy41.menu.speed.600.build.fcpu=600000000
-teensy41.menu.speed.528.build.fcpu=528000000
-teensy41.menu.speed.450.build.fcpu=450000000
-teensy41.menu.speed.396.build.fcpu=396000000
-teensy41.menu.speed.150.build.fcpu=150000000
-teensy41.menu.speed.24.build.fcpu=24000000
-
-teensy41.menu.opt.o2std=Faster
-teensy41.menu.opt.o2std.build.flags.optimize=-O2
-teensy41.menu.opt.o2std.build.flags.ldspecs=
-
-teensy41.menu.keys.usint=US International
-teensy41.menu.keys.usint.build.keylayout=US_INTERNATIONAL
-
-
 teensy40.name=Teensy 4.0
 #teensy40.upload.maximum_size=2031616
 teensy40.build.board=TEENSY40
@@ -117,12 +50,11 @@ teensy40.serial.restart_cmd=false
 teensy40.menu.usb.rawhid512=SRGBmods LC v2
 teensy40.menu.usb.rawhid512.build.usbtype=USB_RAWHID512
 teensy40.menu.usb.rawhid512.fake_serial=teensy_gateway
-
-teensy40.menu.speed.600=600 MHz
+teensy40.menu.speed.150=150 MHz (cool and fast enough)
+teensy40.menu.speed.600=600 MHz (CPU default speed)
 teensy40.menu.speed.528=528 MHz
 teensy40.menu.speed.450=450 MHz
 teensy40.menu.speed.396=396 MHz
-teensy40.menu.speed.150=150 MHz
 teensy40.menu.speed.24=24 MHz
 teensy40.menu.speed.720=720 MHz (overclock)
 teensy40.menu.speed.816=816 MHz (overclock)
@@ -140,11 +72,70 @@ teensy40.menu.speed.450.build.fcpu=450000000
 teensy40.menu.speed.396.build.fcpu=396000000
 teensy40.menu.speed.150.build.fcpu=150000000
 teensy40.menu.speed.24.build.fcpu=24000000
-
 teensy40.menu.opt.o2std=Faster
 teensy40.menu.opt.o2std.build.flags.optimize=-O2
 teensy40.menu.opt.o2std.build.flags.ldspecs=
-
-
 teensy40.menu.keys.usint=US International
 teensy40.menu.keys.usint.build.keylayout=US_INTERNATIONAL
+
+teensy41.name=Teensy 4.1
+#teensy41.upload.maximum_size=8126464
+teensy41.build.board=TEENSY41
+teensy41.build.flags.ld=-Wl,--gc-sections,--relax "-T{build.core.path}/imxrt1062_t41.ld"
+#teensy41.upload.maximum_data_size=524288
+teensy41.upload.tool=teensyloader
+teensy41.upload.tool.default=teensyloader
+teensy41.upload.tool.teensy=teensyloader
+teensy41.upload.protocol=teensy
+teensy41.upload_port.modelID=0x25
+teensy41.build.core=teensy4
+teensy41.build.mcu=imxrt1062
+teensy41.build.warn_data_percentage=99
+teensy41.build.toolchain=arm/bin/
+teensy41.build.command.gcc=arm-none-eabi-gcc
+teensy41.build.command.g++=arm-none-eabi-g++
+teensy41.build.command.ar=arm-none-eabi-gcc-ar
+teensy41.build.command.objcopy=arm-none-eabi-objcopy
+teensy41.build.command.objdump=arm-none-eabi-objdump
+teensy41.build.command.linker=arm-none-eabi-gcc
+teensy41.build.command.size=arm-none-eabi-size
+teensy41.build.flags.common=-g -Wall -ffunction-sections -fdata-sections -nostdlib
+teensy41.build.flags.dep=-MMD
+teensy41.build.flags.optimize=-Os
+teensy41.build.flags.cpu=-mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16
+teensy41.build.flags.defs=-D__IMXRT1062__ -DTEENSYDUINO=157
+teensy41.build.flags.cpp=-std=gnu++14 -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -Wno-unused-variable
+teensy41.build.flags.c=
+teensy41.build.flags.S=-x assembler-with-cpp
+teensy41.build.flags.libs=-larm_cortexM7lfsp_math -lm -lstdc++
+teensy41.serial.restart_cmd=false
+teensy41.menu.usb.rawhid512=SRGBmods LC v2
+teensy41.menu.usb.rawhid512.build.usbtype=USB_RAWHID512
+teensy41.menu.usb.rawhid512.fake_serial=teensy_gateway
+teensy41.menu.speed.150=150 MHz (cool and fast enough)
+teensy41.menu.speed.600=600 MHz (CPU default speed)
+teensy41.menu.speed.528=528 MHz
+teensy41.menu.speed.450=450 MHz
+teensy41.menu.speed.396=396 MHz
+teensy41.menu.speed.24=24 MHz
+teensy41.menu.speed.720=720 MHz (overclock)
+teensy41.menu.speed.816=816 MHz (overclock)
+teensy41.menu.speed.912=912 MHz (overclock, cooling req'd)
+teensy41.menu.speed.960=960 MHz (overclock, cooling req'd)
+teensy41.menu.speed.1008=1.008 GHz (overclock, cooling req'd)
+teensy41.menu.speed.1008.build.fcpu=1008000000
+teensy41.menu.speed.960.build.fcpu=960000000
+teensy41.menu.speed.912.build.fcpu=912000000
+teensy41.menu.speed.816.build.fcpu=816000000
+teensy41.menu.speed.720.build.fcpu=720000000
+teensy41.menu.speed.600.build.fcpu=600000000
+teensy41.menu.speed.528.build.fcpu=528000000
+teensy41.menu.speed.450.build.fcpu=450000000
+teensy41.menu.speed.396.build.fcpu=396000000
+teensy41.menu.speed.150.build.fcpu=150000000
+teensy41.menu.speed.24.build.fcpu=24000000
+teensy41.menu.opt.o2std=Faster
+teensy41.menu.opt.o2std.build.flags.optimize=-O2
+teensy41.menu.opt.o2std.build.flags.ldspecs=
+teensy41.menu.keys.usint=US International
+teensy41.menu.keys.usint.build.keylayout=US_INTERNATIONAL
