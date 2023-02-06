@@ -1,6 +1,4 @@
 board=teensy40
-custom_keys=teensy40_usint
-custom_opt=teensy40_o2std
 custom_speed=teensy40_150
 custom_usb=teensy40_rawhid512
 editor.languages.current=en

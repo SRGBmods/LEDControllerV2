@@ -3,8 +3,6 @@
 
 menu.usb=USB Type
 menu.speed=CPU Speed
-menu.opt=Optimize
-menu.keys=Keyboard Layout
 
 
 # TODO: consider whether these compiler warnings are worthwhile
@@ -75,7 +73,7 @@ teensy40.menu.speed.24.build.fcpu=24000000
 teensy40.menu.opt.o2std=Faster
 teensy40.menu.opt.o2std.build.flags.optimize=-O2
 teensy40.menu.opt.o2std.build.flags.ldspecs=
-teensy40.menu.keys.usint=US International
+teensy40.menu.keys.usint=unused
 teensy40.menu.keys.usint.build.keylayout=US_INTERNATIONAL
 
 teensy41.name=Teensy 4.1
@@ -137,5 +135,5 @@ teensy41.menu.speed.24.build.fcpu=24000000
 teensy41.menu.opt.o2std=Faster
 teensy41.menu.opt.o2std.build.flags.optimize=-O2
 teensy41.menu.opt.o2std.build.flags.ldspecs=
-teensy41.menu.keys.usint=US International
+teensy40.menu.keys.usint=unused
 teensy41.menu.keys.usint.build.keylayout=US_INTERNATIONAL
