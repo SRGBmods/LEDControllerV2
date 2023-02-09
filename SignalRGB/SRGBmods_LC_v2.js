@@ -1,4 +1,4 @@
-// SRGBmods LED Controller v2 Public-RC1
+// SRGBmods LED Controller v2
 export function Name() { return "SRGBmods LED Controller v2"; }
 export function VendorId() { return 0x16D0; }
 export function ProductId() { return 0x1201; }
