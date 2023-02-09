@@ -51,6 +51,8 @@ function SetupChannels()
 	}
 }
 
+const PluginVersion = "1.0.0";
+
 const vKeyNames = [];
 const vKeyPositions = [];
 const MaxLedsInPacket = 169;
@@ -71,6 +73,27 @@ export function LedPositions()
 export function Initialize()
 {
 	SetupChannels();
+	requestFirmwareVersion();
+}
+
+function compareFirmwareVersion()
+{
+	let firmwarePacket = device.read([0x00], 4, 10);
+	let FirmwareVersion = firmwarePacket[1] + "." + firmwarePacket[2] + "." + firmwarePacket[3]
+	device.log("SRGBmods LC v2 Firmware version: " + FirmwareVersion);
+	device.log("SRGBmods LC v2 Plugin version:   " + PluginVersion);
+	if(FirmwareVersion !== PluginVersion)
+	{
+		device.log("Firmware <-> Plugin version mismatch! Make sure to use matching versions!");
+		device.notify(`Firmware ${FirmwareVersion} <-> Plugin ${PluginVersion} version mismatch!`, `Make sure to use matching versions!`, 0);
+	}
+}
+
+function requestFirmwareVersion()
+{
+	let packet = [ 0x00, 0x00, 0x00, 0x00, 0x00, 0xCC ];
+	device.write(packet, 513);
+	compareFirmwareVersion();
 }
 
 export function Render()
